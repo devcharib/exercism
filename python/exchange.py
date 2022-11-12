@@ -1,36 +1,40 @@
-# o valor da moeda convertida
-def em(a,b):
-    return a / b
-# print(em(120, 1.32))
-
-# # o que resta do orcamento
-def getc(a,b):
-    return a - b
-# print(getc(127.5, 120))
-
-# # total das contas , tirando os valores quebrados de cada conta( valor que sobram que nao sao divisiveis pelo valor padrao)
-def bills(a,b):
-    return a * int(b) 
-# print(bills(5, 128.75))
-
-# o numero de contas divisivel pelo valor de uma conta, dentro do orcamento
-def nbill(a,b):
-    return int(a // b)
-print(nbill(125, 5))
-
-# o valor que nao pode ser trocado referente ao padrao
-def left_b(a,b):
-    return a % b if a % b == 0 else (a - b*(a // b)) 
-# print(left_b(127.5, 20))
-
-# o valor maximo da moeda depois do spread somado a taxa de cambio
-def excha(a,b,c,d):
-     b += b*(c /100)
-     exchange = em(a,b)
-     print(exchange)
-     lefttover = left_b(exchange,d)
-     print(lefttover)
-     
-     return int(exchange - lefttover)
-
-print(excha(127.5, 1.20, 10, 20))
+def exchange_money(budget, exchange_rate):
+    """
+    The function exchange_money return the value of the exchanged currency.
+    """
+    return budget / exchange_rate
+def get_change(budget, exchanging_value):
+    """
+    The function get_change return the amount of money that is left from the budget.
+    """
+    return budget -  exchanging_value
+def get_value_of_bills(denomination, number_of_bills):
+    """
+    The function get_value_of_bills return only the total value of the bills
+    (excluding fractional amounts) the booth would give back.
+    """
+    return denomination * int(number_of_bills)
+def get_number_of_bills(budget, denomination):
+    """
+    This function get_number_of_bills should return the number of new currency
+    bills that you can receive within the given budget.
+    """
+    return int(budget // denomination)
+def get_leftover_of_bills(budget, denomination):
+    """
+    This function get_leftover_of_bills return the leftover amount that cannot be
+    exchanged from your budget given the denomination of bills
+    """
+    return budget % denomination
+def exchangeable_value(budget, exchange_rate, spread, denomination):
+    """
+    This function exchangeable return the maximum value of the new currency
+    after calculating the exchange rate plus the spread.
+    money_exchanged reiceived return of the function exchange_money()
+    leftover_amount reiceived return of the funtion get_leftover_of_bills() with
+    money exchanged
+    """
+    exchange_rate += exchange_rate * exchange_money(spread, 100)
+    money_exchanged = exchange_money(budget, exchange_rate)
+    leftover_amount = get_leftover_of_bills(money_exchanged, denomination)
+    return get_change(money_exchanged, leftover_amount)
