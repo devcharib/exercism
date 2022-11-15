@@ -38,3 +38,8 @@
         condicionais
         laço de repetição
         operadores [==,>=,<=, False, or, not, +]
+    - Grains
+        função
+        condicionais
+        levantamento de Erro
+        operadores [*,**,<,>,-, or]
