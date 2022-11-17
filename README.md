@@ -43,3 +43,11 @@
         condicionais
         levantamento de Erro
         operadores [*,**,<,>,-, or]
+    - Two fer
+        função com atributo padrão
+        string.format()
+    - Leap year
+        função
+        condicionais
+        operadores [%,!=,==,False ,True]
+    
