@@ -20,7 +20,6 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
     prod = int(temperature * neutrons_produced_per_second)
-    print(prod)
     if prod < threshold * 0.9:
         return 'LOW'
     if prod <= threshold * 1.1:

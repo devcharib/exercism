@@ -29,3 +29,13 @@ def is_armstrong_number(number):
 
 x = is_armstrong_number(int(input()))
 print(x)
+
+#melhoria code clean
+def is_armstrong_number(number):
+    """
+    this function is_armstrong_number returns True or False for the
+    number whether is an Armstrong number.
+    """
+    digits = list(str(number))
+    number_of_digits = len(digits)
+    return sum([int(dig)**number_of_digits for dig in digits]) == number

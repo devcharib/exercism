@@ -50,4 +50,23 @@
         função
         condicionais
         operadores [%,!=,==,False ,True]
-    
+    - Meltdown Mitigation
+        função
+        condicionais
+        operadores [<=,>,<,=>,*,/,]
+    - Differrence of Squares
+        generator expression
+        função
+        função que chama função
+        laço de repetição
+        operadores [-,**,+]
+    - Armstrong Numbers
+        função
+        lista
+        list comprehensson
+        operadores [**, ==]
+    - Bob
+        função
+        condicionais
+        operadores [not, ]
+        string methods

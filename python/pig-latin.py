@@ -3,16 +3,12 @@ TRAT = lambda t: t.removeprefix(t[:1])
 WORD = lambda w: TRAT(w) + w[:1]
 
 def translate(text):
-    word = []
-    list = text.split()
-    for item in list:
-        word.append(result(item))
-    if len(word) > 1:
-        return " ".join(word)
-    return "".join(word)
+#    word = [result(item) for item in text.split()]
+#    return " ".join(word) if len(word) > 1 else "".join(word)
+   return " ".join([result(word) for word in text.split()])
 
 def result(text):
-    if text.startswith(VOWEL) : # rule 1
+    if text.startswith(VOWEL): # rule 1
         return text + "ay"
 
     if "qu" in text: # rule 3
@@ -29,6 +25,5 @@ def result(text):
         text = WORD(text)
     return text + "ay"
 
-
-x = translate("")
+x = translate("big big big")
 print(x)
