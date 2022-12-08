@@ -70,3 +70,32 @@
         condicionais
         operadores [not, ]
         string methods
+    - Raindrops
+        função
+        list comprehensson
+        string methods
+        operadores [%, ==]
+    - Perfect Numbers
+        função
+        tratamento de Erro
+        laço de repetição
+        condicionais
+        operadores [+,%,!=, //, ==,<,>]
+        module math (math.sqrt)
+    - Pig Latin
+        função
+        função que chama função
+        constantes
+        list comprehensson
+        função anônima: lambda
+        string methods
+        laco de repetição
+        condicionais
+        operadores [==,!=,+]
+    - Black Jack
+        função
+        função que chama função
+        numbers methods
+        condicionais
+        operadores [False, <=,>,==,!=]
+    -

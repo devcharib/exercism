@@ -20,6 +20,8 @@
 #---------------- more velocity
 
 import math
+
+
 def classify(number):
     if number < 1:
         raise ValueError("Classification is only possible for positive integers.")

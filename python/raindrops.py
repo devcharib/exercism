@@ -18,14 +18,25 @@
 #             drops += rain[n]
 #     return str(number) if not drops else drops
 #------------------------ more DRY
-RAIN = {3:"Pling", 5:"Plang", 7:"Plong"}
+# RAIN = {3:"Pling", 5:"Plang", 7:"Plong"}
 
-def convert(number):
-    drops = ""
-    for key, value in RAIN.items():
-        if number % key == 0:
-            drops = "".join([drops, value])
-    return drops or str(number)
+# def convert(number):
+#     drops = ""
+#     for key, value in RAIN.items():
+#         if number % key == 0:
+#             drops = "".join([drops, value])
+#     return drops or str(number)
 
-x = convert(105)
-print(x)
+# x = convert(105)
+# print(x)
+
+FACTORS = {3:"Pling", 5:"Plang", 7:"Plong"} 
+
+def convert(number): 
+
+    list = [value for key, value in FACTORS.items() if number % key == 0]
+    drops = "".join(list)
+    
+    return drops or str(number) 
+
+print(convert(52))
